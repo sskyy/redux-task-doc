@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Quick Start | redux-task</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../introduction/Thoughts_Behind_Code.html" />
+    
+    
+    <link rel="prev" href="../introduction/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.1"
+        data-chapter-title="Quick Start"
+        data-filepath="introduction/Quick_Start.md"
+        data-basepath=".."
+        data-revision="Tue Mar 08 2016 13:21:45 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="introduction/index.html">
+            
+                
+                    <a href="../introduction/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Get Started
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1" data-path="introduction/Quick_Start.html">
+            
+                
+                    <a href="../introduction/Quick_Start.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Quick Start
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction/Thoughts_Behind_Code.html">
+            
+                
+                    <a href="../introduction/Thoughts_Behind_Code.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Thoughts Behind Code
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="usage/index.html">
+            
+                
+                    <a href="../usage/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Usage
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="usage/Basic.html">
+            
+                
+                    <a href="../usage/Basic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Basic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="usage/Dynamic_Task_Name.html">
+            
+            <span><b>2.2.</b> Dynamic Task Name</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="api/API.html">
+            
+                
+                    <a href="../api/API.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        API
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >redux-task</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="quick-start">Quick Start</h1>
+<p>One of the most annoying things about managing asynchronicity in redux is that you have to manually set multiple state in store to indicate the states of you asynchronous action such as fetching data from server. To handle on asynchronous action, usually three state are needed, <code>REQUEST_START</code>, <code>REQUEST_SUCCEED</code> and <code>REQUEST_FAILED</code>. What if there is a central palce automatically hold all the asynchronous action and their state for you, and all you need to do is name the asynchronous action if you need to put their state in components. Let&apos;s see how we can acheive this.</p>
+<h2 id="step-1-create-a-event-listener">Step 1: create a event listener</h2>
+<p>Just like action and reducer, we use <code>event</code> and <code>listener</code> to wrap all the asynchronous code. A listener is a generator which will be called when a certain <strong>event</strong> is emitted. A task is a named generator, a promise, or a function returns a promise or generator. So, a generator can be both named and be used as listener at same time. In the code below, we named a generator as <code>loginTask</code>, so it is a task now. And we also use it as a listener to handle event <code>login</code>.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> {listen, name} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-task&apos;</span>
+
+function* loginCurrentUser(){
+    // mimic ajax
+    yield new Promise(resolve=&gt;setTimeout(resolve, 1000))
+
+}
+
+const loginListener = listen( <span class="hljs-string">&apos;login&apos;</span>, name(loginCurrentUser, <span class="hljs-string">&apos;loginTask&apos;</span>))
+</code></pre>
+<p>Listening to a redux action directly is also possible, we will show you how to do that later.</p>
+<h2 id="step-2-create-store-with-reduxtask-enhancer">Step 2: create store with redux-task enhancer</h2>
+<p>Then we can create our store:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> {createEnhancer} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-task&apos;</span>
+
+const store = createStore(reducer, {}, createEnhancer([loginListener]));
+</code></pre>
+<h2 id="step-3-monitor-the-task-state-in-react-component">Step 3: monitor the task state in react component</h2>
+<p>Finally, let&apos;s see how to emit a event, and how to get the state of the yield task. We will use api <code>monitor</code> to wrap our component. The usage is quite similar as redux api <code>connect</code>. It takes a function to map task state to props. And monitor will pass an aditional method called <code>emit</code> to your component, so you can use it to emit evemt.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> {monitor} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-task&apos;</span>
+
+const App = (props)=&gt;{
+    return (
+        &lt;div&gt;
+            &lt;button onClick={()=&gt;props.emit(<span class="hljs-string">&apos;login&apos;</span>)}&gt;click&lt;/button&gt;
+            &lt;div&gt;state of helloTask:{this.props.loginTask}&lt;/div&gt;
+        &lt;/div&gt;
+    )
+}
+
+function mapTaskStateToProps(state){
+    return {
+        loginTask : state.loginTask
+    }
+}
+
+export default monitor(mapTaskStateToProps)(App)
+</code></pre>
+<p>Looking for more examples? Checkout the <a href="https://github.com/sskyy/redux-task/tree/master/examples" target="_blank">examples</a> directory.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../introduction/index.html" class="navigation navigation-prev " aria-label="Previous page: Get Started"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../introduction/Thoughts_Behind_Code.html" class="navigation navigation-next " aria-label="Next page: Thoughts Behind Code"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
